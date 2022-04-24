@@ -39,9 +39,9 @@ host('[EXAMPLE.COM]')
     // Website user. Deployer uses this config for actual ssh connection to a
     // remote/hosting server (e.g. website_user@example.com).
     ->set('remote_user', '[WEBSITE_USER]')
-    // The path inside the server, starting from the website and website user
-    // directory, that should be used to deploy Symfony application.
-    ->set('deploy_path', '~/app')
+    // The path to the location on the server where a Symfony application should
+    // be deployed.
+    ->set('deploy_path', '[PATH/TO/APP/DIRECTORY]')
     // Deployer uses this config to assign writing permissions required by Symfony
     // applications, to certain directories (e.g. cache, log).
     ->set('writable_mode', 'chmod')
