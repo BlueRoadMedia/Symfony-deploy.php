@@ -1,5 +1,5 @@
 # Symfony-deploy.php
-Base *deploy.php* file for *Symfony* based web apps deployment, via *Deployer* deployment tool 
+Base *deploy.php* file for *Symfony* based web apps deployment, via *Deployer* deployment tool. 
 ## Instructions
 1. Inside a project root directory, run on a command line the following:
 
