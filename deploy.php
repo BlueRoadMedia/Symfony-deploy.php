@@ -26,10 +26,11 @@ set('symfony_env', 'prod');
 // https://deployer.org/docs/7.x/hosts
 // https://lorisleiva.com/deploy-your-laravel-app-from-scratch/install-and-configure-deployer#hosts
 
-// The hosts section defines a deployment location. You can call it by the
+// The host section defines a deployment location. You can call it by the
 // hosting server url address (e.g. 'example.com', 'staging.example.com' etc.) or 
 // any other way you see fit (e.g. 'production', 'staging' etc.)
 host('[EXAMPLE.COM]')
+    // HOSTNAME
     // In case the actual hosting server's ssh connection address is different
     // than what is host defined as, a 'hostname' setting must be provided.
     // The 'hostname' will be used for the actual ssh connection destination.
@@ -37,9 +38,11 @@ host('[EXAMPLE.COM]')
     // ->set('hostname', '[EXAMPLE.EXAMPLE.COM]')
     // 2. Or it can be a hosting server ip address.
     // ->set('hostname', '63.245.75.182')
-    // Website user. Deployer uses this config for actual ssh connection to a
+    // WEBSITE USER (DEPLOYER USER)
+    // Deployer uses this config for actual ssh connection to a
     // hosting server (e.g. website_user@example.com).
     ->set('remote_user', '[WEBSITE_USER]')
+    // SSH CONFIG
     // Ssh connection to a hosting server.
     // 1. It is a good practice to keep hosting server's ssh connection parameters
     // out of 'deploy.php'file, as they can change depending on where the deploy
@@ -49,9 +52,11 @@ host('[EXAMPLE.COM]')
     // 2. Or provide the path to a private key for ssh connection to a hosting
     // server.
     // ->set('identity_file', '[PATH/TO/PRIVATE/KEY]')
+    // DEPLOY PATH
     // The path to the location on a hosting server where a Symfony application
     // should be deployed.
     ->set('deploy_path', '[PATH/TO/APP/DIRECTORY]')
+    // WRITABLE MODE
     // Deployer uses this config to assign writing permissions required by Symfony
     // applications, to certain directories (e.g. cache, log). Default value is 'acl'.
     // Other possible values are: 'chown', 'chgrp' and 'chmod'.
